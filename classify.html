@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Signin Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wgt@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            #one{
+                margin-top: 2em;
+                width:10em;
+                height:3em;
+            }
+            section{
+                justify-content: center;
+            }
+            hr{
+                margin-left: 1%;
+                margin-right: 70%;
+                align-items: center;
+            }
+            p{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding:1px;
+                margin-left: 1em;
+            }
+            .para{
+                color:blue;
+                text-decoration: solid;
+            }
+            #logo{
+                border-radius: 50%;
+                width:65px;
+                height:65px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html" target="_top"><img src="logo.jpeg" alt="pic" width="100px" height="100px" alt="home"/></a>
+            </div>
+            <nav>
+                <ul id="Menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="classify.html">Account</a></li>
+                </ul>
+            </nav>
+            <!--<img src="images/cart.png" width="30px" height="30px">-->
+            <img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()">
+        </div>
+        </div>
+<!----account-page-->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image.jpg" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <section>
+                        <a href="./admin/adlogin.html"><button id="one">Admin</button></a>
+                        <p></p>
+                        <!--<button onclick="register()">Service Provider</button>-->
+                        <a href="./serviceproviders/sp.php"><button id="one">ServiceProvider</button></a>
+                        <p></p>
+                        <a href="./users/frame.html"><button id="one">User</button></a>
+                        <br><br>
+                        <hr id="indicator"><br>
+                        <p>Are you not the owner of this website and not rendering any services? <br><br>Click on <a href="./users/frame.html" class="para">Users</a></p>
+                    </section>
+                    </div>
+               <!----     <form id="loginform" name="Form" method="POST" action="login.php" onsubmit="return validate()">
+                        <input type="text" name="user" placeholder="Username" required autocomplete="off"/>
+                        <input type="text" name="mid" placeholder="Email" required autocomplete="off" autofocus="off"/>
+                        <input type="password" name="pwds" placeholder="Password" required autocomplete="off"/>
+                        <button type="submit" class="btn" name="login">Login</button>
+                        <a href="#">Forgot password</a> 
+                        <p>New User?  <a href="#regform">Register here</a></p>
+                    </form>-->
+               <!----     <form id="regform" name="myForm" method="POST" action="connect.php" onsubmit="return validateForm()">
+                        <input type="text" name="user" placeholder="Username" required autocomplete="off"/>
+                        <input type="email" name="mailid" placeholder="Email" required autocomplete="off"/>
+                        <input type="password" name="pwd" placeholder="Password" required autocomplete="off"/>
+                        <input type="password" name="cpwd" placeholder="Confirm Password" required autocomplete="off"/>
+                        <button type="submit" class="btn" name="register">Register</button>
+                        <p>Already have an Account? <a href="#loginform"> Login</a></p>
+                    </form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------footer--->
+      <div class="footer">
+        <div class="container">
+            <div class="row">
+               <div class="footer-col1">
+                    <!--<h3>Download our App</h3>
+                    <p>Download App for Android and IOS mobile phone.</p>
+                    <div class="applogo">
+                        <img src="images/playstore.jpg" width="10" height="40">
+                        <img src="images/app-store.png">
+                    </div>-->
+                </div>
+                <div class="footer-col2">
+                    <img src="images/logo.jpg"  id="logo">
+                    <p>Our purpose is to sustainably make the pleasure and benifits of services Accessible to the Many.</p>
+                </div>
+                <div class="footer-col3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 - EEStore</p>
+        </div>
+      </div>
+<!---js for toggle menu-->
+<script>
+    var Menuitems=document.getElementById("Menuitems");
+    Menuitems.style.maxHeight="0px";
+    function menutoggle()
+    {
+        if(Menuitems.style.maxHeight=="0px")
+        {
+            Menuitems.style.maxHeight="200px";
+        }
+        else
+        Menuitems.style.maxHeight="0px"
+    }
+</script>
+<!---js for toggle form-->
+<script>
+    var loginform=document.getElementById("loginform");
+    var regform=document.getElementById("regform");
+    var indicator=document.getElementById("indicator");
+    function register()
+    {
+        regform.style.transform="translateX(0px)";
+        loginform.style.transform="translateX(0px)";
+        indicator.style.transform="translateX(100px)";
+    }
+    function login()
+    {
+        regform.style.transform="translateX(300px)";
+        loginform.style.transform="translateX(300px)";
+        indicator.style.transform="translateX(0px)";
+    }
+    function validateForm(){
+        let x=document.forms["myForm"]["user"].value;
+        if(x==" "){
+        alert("Name must be filled out");
+        return false;}
+        let y=document.forms["myForm"]["mailid"].value;
+        var pos=y.indexOf("@");
+        var dpos=x.lastIndexOf(".");
+        if(!y.includes("@gmail.com"))
+            {
+                alert("Please enter a valid mail id");
+                return false;
+            }
+        var password=document.forms["myForm"]["pwd"].value;
+        if(password.length<8)
+        {
+            alert("Password must be of length 8 characters");
+            return false;
+        }
+        var fpwd=document.forms["myForm"]["pwd"].value;
+        var spwd=document.forms["myForm"]["cpwd"].value;
+        if(fpwd==spwd)
+        {
+        return true;
+        }
+        else{
+            alert("Confirmed Password didn't match with password");
+            return false;
+        }
+    }
+    function validate()
+    {
+        var y=document.forms["Form"]["mid"].value;
+        if(!y.includes("@gmail.com"))
+        {
+            alert("Please enter a valid mail id");
+                return false;
+        }
+        var p=document.forms["Form"]["pwds"].value;
+        if(p.length<8)
+        {
+            alert("Password must be of length 8 characters");
+            return false;
+        }
+    }
+</script>
+    </body>
+</html>

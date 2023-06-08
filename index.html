@@ -1,0 +1,103 @@
+<!--<?php
+include('connect.php');
+?>-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>EE-commerce</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wgt@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .image{
+                background-image: url("images/image.jpg");
+                height:100%;
+                width: 100%;
+            }
+            ul{
+                display:block;
+                
+            }
+            ul li{
+                display:flex;
+                color:aqua;
+                align-items: center;
+                justify-content: space-around;
+                
+            }
+           .list{
+            padding:150px;
+            font-size: 20px;
+           }
+           .cla{
+            margin-top:10px;
+            border:2px solid ghostwhite;
+            object-fit: contain;
+            width:fit-content;
+           }
+           .side{
+            margin-left:75%;
+            margin-top:-5em;
+            border:2px solid grey;
+            object-fit: contain;
+            width:fit-content;
+           }
+        </style>
+    </head>
+    <body id="color">
+        <div class="header">
+            <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="logo.jpeg" alt="pic" width="50px" height="50px"></a>
+                </div>
+                <nav>
+                    <ul id="Menuitems">
+                        <li><a href="chatbot/index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="classify.html">Account</a></li>
+                        <!--<li><a href="signin.html">Account</a></li>-->
+                    </ul>
+                </nav>
+                <img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()">
+            </div>
+            </div>
+            </div>
+            <div class="image">
+                <img src="images/image.jpg" alt="Service center" id="s1"/>
+                <!--<div class="list">
+                <ul class="cla">
+                    <li>Electric</li>
+                    <li>Stove</li>
+                    <li>Calculator</li>
+                    <li>Mixi</li>
+                    <li>Heater</li>
+                </ul>
+                <ul class="side">
+                    <li>Electronic</li>
+                    <li>AC</li>
+                    <li>Laptop</li>
+                    <li>Refrigerator</li>
+                    <li>Speaker</li>
+                </ul>
+            </div>
+           
+            </div>-->
+    </body>
+    <script>
+        var Menuitems=document.getElementById("Menuitems");
+        Menuitems.style.maxHeight="0px";
+        function menutoggle()
+        {
+            if(Menuitems.style.maxHeight=="0px")
+            {
+                Menuitems.style.maxHeight="200px";
+            }
+            else
+            Menuitems.style.maxHeight="0px"
+        }
+        </script>
+</html>

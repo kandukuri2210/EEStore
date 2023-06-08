@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Admin Login Page</title>
+        <style>
+            .adlogform{
+                text-align: center;
+                
+                border:2px solid black;
+                margin-top: 5em;
+                margin-left: 20em;
+                margin-right: 20em;
+                object-fit: contain;
+                height:20%;
+            }
+            #adlog{
+                border-width: 2px;
+                margin-top: 5px;
+                border-color: green;
+                margin-bottom: 3px;
+            }
+          
+           label,p{
+            color: black;
+           }
+           input{
+            color: blue;
+           }
+           a{
+            text-decoration: none;
+            color:azure;
+           }
+           h1{
+            text-align: center;
+           }
+           .logo{
+            width:3px;
+            height:3px;
+            margin-left:2px;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="logo"> 
+            <img src="../logo.jpeg" width="300px" height="350px">
+        </div>
+        <h1>Welcome Admin!!</h1>
+        <div class="adlogform">
+            <form id="adlog" name="logform" method="POST" action="adlog.php" onsubmit="return validateForm()">   
+            <label for="email">E-mail</label>
+            <input type="email" name="maid" required/><br><br>
+            <label for="password">Password</label>
+            <input type="password" name="pard" required/><br><br>
+            <button type="submit" class="btn" name="Login">Login</button>
+            <!--<p>New User?  <a href="adregister.html">Register here</a></p>-->
+        </form>
+    </div>
+    </body>
+    <script>
+        function validate()
+    {
+        var y=document.forms["Form"]["mid"].value;
+        if(!y.includes("@gmail.com"))
+        {
+            alert("Please enter a valid mail id");
+                return false;
+        }
+        var p=document.forms["Form"]["pwds"].value;
+        if(p.length!=8)
+        {
+            alert("Password must be of length 8 characters");
+            return false;
+        }
+    }
+    </script>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Admin Registation Page</title>
+        <style>
+            .adregform{
+                text-align: center;
+                border-width: fit-content;
+                border:2px solid black;
+                margin-top: 5em;
+                margin-left: 20em;
+                margin-right: 20em;
+            }
+            #adregister{
+                border-width: fit-content;
+                margin-top: 5px;
+                border-color: blue;
+                margin-bottom: 3px;
+                text-align:center;
+                border:2px solid black;
+                padding:5px;
+                
+            }
+           
+           
+          body{
+            background: radial-gradient(#fff,#ffd6d6);
+            background-image: url("../back.jfif");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+           input{
+            color: blue;
+            margin-top:3px;
+           }
+           a{
+            text-decoration: none;
+            
+           }
+           marquee{
+            background-color: black;
+            height:90px;
+           }
+           h2{
+            color:white;
+            margin-top:35px;
+           }
+           form{
+            border:2px solid white;
+            padding-left:15px;
+            background-color: #ffd6d6;
+           }
+           img {
+            margin-top:50px;
+            margin-left:15px;
+	transform: rotate(-12deg)
+}
+.required::after{
+          content:" * ";
+          color:red;
+          font-size:20px;
+        }
+        .form-group{
+            margin-left: 40%;
+            margin-top:2%;
+            margin-right:50%;
+        }
+        </style>
+    </head>
+    <body>
+        <marquee><h2>Welcome to admin Registration Page!!</h2></marquee>
+            <div class="grid-container p-5">
+            <div class="row">
+                <!--<div class="col-6">
+                    <img src="../back.jfif" width="450" height="330">
+                
+                </div>-->
+               
+                <div class="form-group col-md-4">
+                 <form  name="regform" method="POST" action="adreg.php" onsubmit="return validateForm()">
+            <label for="Username" class="required">Username</label><br>
+            <input type="text" name="user" width="50" required/><br>
+            <label for="email" class="required">E-mail</label><br>
+            <input type="email" name="mail" width="50" required/><br>
+            <label for="Phone" class="required">Phone Number</label><br>
+            <input type="tel" name="phno" width="50" required/><br>
+            <label for="password" class="required">Password</label><br>
+            <input type="password" name="pas" width="50" required/><br>
+            <label for="cpassword" class="required">Confirm Password</label><br>
+            <input type="password" name="cpass" width="50" required/><br><br>
+            <div class="text-center">
+            <button type="submit" class="btn-safe text-center" name="Register">Register</button>
+        </div>
+            <p></p>
+            <p>Already have an Account? <a href="adlogin.html"> Login</a></p>
+        </form>
+            </div>
+            
+    </div>
+    </div>
+    </div>
+    </body>
+    <script>
+        function validateForm(){
+        let x=document.forms["regform"]["user"].value;
+        if(x==" "){
+        alert("Name must be filled out");
+        return false;}
+        let y=document.forms["regform"]["mail"].value;
+        var pos=y.indexOf("@");
+        var dpos=x.lastIndexOf(".");
+        if(!y.includes("@gmail.com"))
+            {
+                alert("Please enter a valid mail id");
+                return false;
+            }
+        var phoneno=document.forms["regform"]["phno"].value;
+        if(phoneno.length!=10)
+        {
+            alert("Invalid Phone number");
+            return false;
+        }
+        var password=document.forms["regform"]["pas"].value;
+        if(password.length<8)
+        {
+            alert("Password must be of length 8 characters");
+            return false;
+        }
+        var fpwd=document.forms["regform"]["pas"].value;
+        var spwd=document.forms["regform"]["cpass"].value;
+        if(fpwd==spwd)
+        {
+        return true;
+        }
+        else{
+            alert("Confirmed Password didn't match with password");
+            return false;
+        }
+    }
+    </script>
+</html>

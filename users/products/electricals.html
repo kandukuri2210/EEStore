@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>All Products-EEStore</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wgt@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .small-img-col{
+                padding:20px;
+            }
+            #one{
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="../../index.html"><img src="../../images/image.jpg" alt="pic" width="25%"></a>
+            </div>
+            <img src="../../images/menu.jpg" class="menu-icon" onclick="menutoggle()">
+        </div>
+        </div>
+         <!--------single product details----->
+         <div class="small-container single-product">
+            <div class="row">
+                <div class="col-2">
+                    <img src="../../images/stove.jpg" width="50%" id="ProductImg">
+                    <div class="small-img-row">
+                        <div class="small-img-col">
+                            <img src="../../images/grinder.jpg" width="100%"class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="../../images/mixi.jpg" width="100%" class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="../../images/heater.jpg" width="100%"class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="../../images/bulbs.jpg" width="100%"class="small-img">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="../../images/stove.jpg" width="100%" class="small-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+<!---title--->
+    <div class="row row-2">
+        <button onclick="display()">View more</button>
+    </div>
+<!----products-->
+         <div class="small-container" id="one">
+            <div class="row">
+                <div class="col-4">
+                    <a href="./eletricaldetails.php"><img src="../../images/bulbs.jpg" HSPACE="50"></a>
+                    <h4>Tungsten Bulb</h4>
+                    <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                    </div>
+                    <!--<p>$50.00</p>-->
+                </div>
+                <div class="col-4">
+                    <a href="./electricaldetails.php"><img src="../../images/mixi.jpg" HSPACE="50"></a>
+                    <h4>Mixi and Mixi Jar</h4>
+                    <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half-o"></i>
+                     <i class="fa fa-star-o"></i>
+                    </div>
+                    <!--<p>$80.00</p>-->
+                </div>
+                <div class="col-4">
+                    <a href="./eletricaldetails.php"><img src="../../images/grinder.jpg" HSPACE="50"></a>
+                    <h4>Grinder</h4>
+                    <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <!--<p>$90.00</p>-->
+                </div>
+                <div class="col-4">
+                    <a href="./eletricaldetails.php"><img src="../../images/fans.jpg" HSPACE="50"></a>
+                    <h4>Fans</h4>
+                    <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                    </div>
+                    <!--<p>$50.00</p>-->
+                </div>
+                <div class="col-4">
+                    <a href="./eletronicdetails.html"><img src="../../images/laptop.jpg"></a>
+                    <h4>Laptop</h4>
+                    <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                    </div>
+                    <!--<p>$60.00</p>-->
+                </div>
+                <div class="col-4">
+                    <a href="./eletronicdetails.html"><img src="../../images/mobile.jpg"></a>
+                    <h4>Mobiles</h4>
+                    <div class="rating">
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star-o"></i>
+                    </div>
+                    <!--<p>$50.00</p>-->
+                </div>
+            </div>
+            
+        </div>
+
+<script>
+    var Menuitems=document.getElementById("Menuitems");
+    Menuitems.style.maxHeight="0px";
+    function menutoggle()
+    {
+        if(Menuitems.style.maxHeight=="0px")
+        {
+            Menuitems.style.maxHeight="200px";
+        }
+        else
+        Menuitems.style.maxHeight="0px"
+    }
+    function display()
+    {
+        var x=document.getElementById("one");
+        x.style.display="flex";
+    }
+</script>
+<!---js for product-gallery--->
+<script>
+    var ProductImg=document.getElementById("ProductImg");
+    var SmallImg=document.getElementsByClassName("small-img");
+    SmallImg[0].onclick=function(){
+        ProductImg.src=SmallImg[0].src;
+    }
+    SmallImg[1].onclick=function(){
+        ProductImg.src=SmallImg[1].src;
+    }
+    SmallImg[2].onclick=function(){
+        ProductImg.src=SmallImg[2].src;
+    }
+    SmallImg[3].onclick=function(){
+        ProductImg.src=SmallImg[3].src;
+    }
+    SmallImg[4].onclick=function(){
+        ProductImg.src=SmallImg[4].src;
+    }
+</script>
+    </body>
+</html>

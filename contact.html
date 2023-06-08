@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>EE-commerce</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wgt@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .contacts
+            {
+                display:inline;
+            }
+        </style>
+    </head>
+    <body id="color">
+        <div class="header">
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <!--<a href="index.html"><img src="images/logo.jpg" alt="pic" width="25px"></a>-->
+                <button onclick="document.getElementById('color').style.backgroundColor='black';" title="dark"><img src="images/dark.png" alt="pic" width="45px"></button>
+                <button onclick="document.getElementById('color').style.backgroundColor='white';" title="light"><img src="images/light.png" alt="pic" width="35px"></button>
+            </div>
+            <nav>
+                <ul id="Menuitems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   <!---- <li><a href="signin.html">Account</a></li>-->
+                   <li><a href="classify.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <div class="row">
+            <div class="col-2">
+             <h1>Take your best service on your own <br>A new style!</h1>
+             <p>Worrying on how to connect with the best serviceproviders nearby <br>Smartwork gains success. Easiness will come.</p>
+            <a href="./users/frame.html" class="btn">Explore Now &#8594; </a>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="footer-col4">
+            <h3>Follow Us</h3><br>
+            <div class="contacts">
+                <centre>
+            <ul>
+                <li><a href="https://www.facebook.com"><img class="circle-image" src="images/fb.jpg" alt="pic" /></a></li>
+                <li><a href="https://www.twitter.com"><img class="circle-image" src="images/tw.jpg" alt="pic" /></a></li>
+                <li><a href="https://www.instagram.com"><img class="circle-image" src="images/ins.jpg" alt="pic" /></a></li>
+                <li><a href="https://www.youtube.com"><img class="circle-image" src="images/u.jpg" alt="pic" /></a></li>
+            </ul>
+        </centre>
+            </div>
+        </div>
+        </body>
+        <script>
+            var Menuitems=document.getElementById("Menuitems");
+            Menuitems.style.maxHeight="0px";
+            function menutoggle()
+            {
+                if(Menuitems.style.maxHeight=="0px")
+                {
+                    Menuitems.style.maxHeight="200px";
+                }
+                else
+                Menuitems.style.maxHeight="0px"
+            }
+            </script>
+        </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>EE-commerce</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wgt@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function func()
+            {
+                document.getElementById("color").style.backgroundcolor="red";
+            }
+        </script>
+    </head>
+    <body id="color">
+        <div class="header">
+            <div class="container">
+                <!--<div class="logo">
+                    <a href="index.html"><img src="images/logo.jpg" alt="pic" width="70px" height="38px"></a>
+                </div>-->
+            <div class="navbar">
+                <div class="logo">
+                    <!--<a href="index.html"><img src="images/logo.jpg" alt="pic" width="25px"></a>-->
+                    <button onclick="document.getElementById('color').style.backgroundColor='black';document.getElementById('pre').style.color='white';" title="dark"><img src="images/dark.png" alt="pic" width="25px" height="25px"></button>
+                    <button onclick="document.getElementById('color').style.backgroundColor='white';" title="light"><img src="images/light.png" alt="pic" width="25px"></button>
+                </div>
+                <nav>
+                    <ul id="Menuitems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="classify.html">Account</a></li>
+                       <!--<li><a href="signin.html">Account</a></li>-->
+                    </ul>
+                </nav>
+                <img src="images/menu.jpg" class="menu-icon" onclick="menutoggle()">
+            </div>
+            </div>
+        </div>
+        <div>
+            <h3 class="pre" style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:black;"> <i>Welcome To EEStore</i></h3><br>
+            <br><br><small id="pre" style="text-align:center; margin-left: 35em; font-size: medium; margin-top: 2em;">Get to know about us</small><br><br><br><br>
+            <div><img src="images/image.jpg" width="500px" height="230px" style="float:left;"/></div>
+            <div>
+            <pre class="pre" style="display:flex; justify-content:flex end;  font-size: 18px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:palevioletred;font-weight: 100;">
+            EEStore is a new online ecommerce store,that is evolving to help users with issues related 
+            to the electonic goods, and service providers to enhance their business. Services that are 
+            being renderd are useful for those who are in need of both the  electrical and electronic 
+            goods services.
+
+            The End to End Service and door step service makes this store unique. Customers can book 
+            their own service based on the locality and category of the product. Your valuable feedback 
+            is essential for us in improving the user experience.
+        </pre>
+        </div>
+        </div><br><br>
+        <div>
+            <h4 class="pre" style="text-align:center;"><b>Little History</b></h4>
+            <p class="pre" style="margin:10px; padding:20px;"><strong>NOAH FLYNN</strong>, founder of EEStore has first started this site to help the people to solve the electric and electronic related problems.That is why, we the team, developed the website to provide users and service providers with good services. We have developed our site in such a way that both the service providers and users get benefitted.</p>
+        </div>
+        <!--<br><hr><br>
+        <div>
+        <h3 style="text-align:center;">EEStore Services</h3><br>
+        <p>People say that ours is a friendly website where the consistency is marked to the top</p>
+        </div>
+        <br><hr><br>
+        <marquee><b>Electrical and Electronic Service Center.. Have a nice browsing</b></marquee>
+        <hr>
+        <br>-->
+        <br><br>
+        <div>
+            <h3 class="pre" style="text-align:center;">Hear from our family... What do they say</h3>
+        </div>
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p class="pre">The website provides the required service Centers in nearby places. Happy to use such a website.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="./images/user-1.png">
+                        <h3>Sean Parker</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p class="pre">Thank you EE Store, for making the works simpler and easy. It is user friendly to get the services of the electrical and electronics services at doorstep.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="./images/user-2.png">
+                        <h3 class="pre">Mike Smith</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p class="pre">The website gives the details of the centers according to the users requirements.. The website is lovely..</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="./images/user-3.png">
+                        <h3 class="pre">Mabel Joe</h3>
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div>
+    </body>
+    <script>
+        var Menuitems=document.getElementById("Menuitems");
+        Menuitems.style.maxHeight="0px";
+        function menutoggle()
+        {
+            if(Menuitems.style.maxHeight=="0px")
+            {
+                Menuitems.style.maxHeight="200px";
+            }
+            else
+            Menuitems.style.maxHeight="0px"
+        }
+        </script>
+</html>

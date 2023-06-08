@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        a{
+            font-size: medium;
+            color:blueviolet;
+        }
+        .back{
+            background: white;
+        }
+        li{
+           margin-left:120px;
+        }
+        .col2
+        {
+            margin-left:90px;
+            margin-top:50px;
+            margin-right:0px;
+        }
+        .col1{
+           margin-left:40px;
+           margin-top:50px;
+           width:500px;
+        }
+        h2{
+            color:black;
+            text-align:center;
+        }
+        h1{
+            color:blueviolet;
+            font-style: oblique;
+        }
+        .li{
+            color:palevioletred;
+            margin-top:10px;
+            font-size: 20px;
+        }
+        h3{
+            color:blueviolet;
+            font-size:18px;
+        }
+        .navbar{
+            background-color:linear-gradient(to right,#33ccff,#ff99cc);
+        }
+        #a{
+            color:purple;
+            font-size:15px;
+            font-style: italic;
+        }
+        #cpy
+        {
+            position:fixed;
+            left:0;
+            bottom:-2px;
+            width:100%;
+            height:50px;
+            text-align:center;
+        }
+    </style>
+    <script type = "text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 2000);
+        }
+
+        var images = [], x = -1;
+        images[0] = "../images/image.jpg";
+        images[1] = "../images/back.jfif";
+        //images[2] = "../images/service.jpg";
+    </script>
+</head>
+<body class="back" onload="startTimer()">
+    <div>
+        <div class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html" id="a"><h3 class="text-info">Service Rendering Management System</h3></a>
+       <!---- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>-->
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" id="a" href="../about.html"><h3  class="text-info">Electrical and Electronic Service Store(EEStore)</h3> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" id="a" href="../packerssystem/index.html"><h3  class="text-info">Packers and Movers Management System (PMMS)</h3></a>
+            </li>
+        </div>
+        </div>
+      </nav>
+      <textarea rows="2" id="speechtotext" placeholder="Search here" style="margin-left:25%; width:45%;border-radius:25px;padding:5px;font-size:18px;background-color:white;"></textarea>
+      <div style="margin-left:65%;height:20px;margin-top:-4%;border-color:white;">
+      <button onclick="voice()"><img src="../images/mic.png" alt="voice search" width="25" height="30" style="border-radius:30px;"></button>
+    </div>
+    <!--<div style="margin-left:50%;border-radius:30px;height:20px;margin-top:-1.5%;">
+        <button onclick="clear()" class="voice">Clear</button>
+      </div>-->
+    <div style="margin-left:72%;border-radius:70px;height:20px;margin-top:-1%;width:30%;height:100%;">
+        <button onclick="go()" class="voice" style="height:35px;width:35px;">Go</button>
+      </div>
+      <div class="row">
+      <div class="col1">
+        <h1>Online Service Store welcomes you to the portal. We are having two different management systems.
+            <ul>
+                <li class="li"><a href="../about.html">EEStore</a></li>
+                <li class="li"><a href="../packerssystem/index.html">PMMS</a></li>
+            </ul>
+            <!--<h3>EEStore has 3 views as 
+                <ol>
+                    <li class="li">Admin Portal</li>
+                    <li class="li">Service Provider</li>
+                    <li class="li">User</li>
+                </ol>
+            </h3>
+            <h3>PMMS has 2 views as 
+                <ol>
+                    <li class="li">Admin Portal</li>
+                    <li class="li">User</li>
+                </ol>
+            </h3>-->
+        </h1>
+        <br><br>
+        <marquee><h2>Have a nice browsing... </h2></marquee>
+      </div>
+      <div class="col2">
+        <span class="carousel-control-next-icon" aria-hidden="true" onclick="displayPreviousImage()"></span>
+        <img id="img" src="../images/image.jpg" width="500" height="300"/>
+        <span class="carousel-control-next-icon" aria-hidden="true" onclick="displayNextImage()"></span>
+        </div>
+    </div>
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with Me!
+            <i id="chat-icon" style="color:#fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+        <div class="content">
+            <div class="full-chat-block">
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp" style="color:pink;">Time Stamp</h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input type="text" id="textInput" class="input-box" name="msg" placeholder="Click on send button to send a message">
+                                <p></p>
+                            </div>
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color:crimson;" class="fa fa-fw fa-heart" onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color:black;" id="myBtn" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                            </div>
+                        </div>
+                        <div id="chat-bar-buttom">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="static/scripts/chat.js"></script>
+    <script src="static/scripts/responses.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+    function voice()
+    {
+        var recognition=new webkitSpeechRecognition();
+        recognition.lang="en-GB";
+        recognition.onresult=function(event){
+            console.log(event);
+            document.getElementById("speechtotext").value=event.results[0][0].transcript;
+        }
+        recognition.start();
+    }
+    function clear()
+    {
+        //document.getElementById("speechtotext").value = "";
+        alert("hi");
+    }
+    function go()
+    {
+        var res=document.getElementById("speechtotext").value;
+        //alert(res);
+        if(res=="Packers and Movers")
+        {
+            window.location.href="../packerssystem/index.html";
+        }
+        else if(res=="electrical Store")
+        {
+            window.location.href="../index.html";
+        }
+        else if(res=="booking page")
+        {
+            window.location.href="../classify.html";
+        }
+        else if(res=="contact page")
+        {
+            window.location.href="../contact.html";
+        }
+        else if(res=="service provider page")
+        {
+            window.location.href="../serviceproviders/sp.php";
+        }
+        else if(res=="admin register page")
+        {
+            window.location.href="../admin/adregister.html";
+        }
+        else
+        {
+            alert(res);
+        }
+    }
+</script>
+
+</html>
